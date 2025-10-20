@@ -1,0 +1,108 @@
+/* ===============================
+   تعريف المتغيرات العامة (الألوان والتصميم)
+================================ */
+:root {
+  --primary: #0d6efd;
+  /* اللون الأساسي للتصميم (أزرق) */
+  --accent: #ff6b6b;
+  /* لون التمييز أو التنبيه (أحمر فاتح) */
+  --muted: #f8f9fa;
+  /* لون الخلفية العام الفاتح */
+  --card-radius: 12px;
+  /* نصف قطر زوايا البطاقات */
+  --max-width: 1100px;
+  /* أقصى عرض للمحتوى في الصفحة */
+}
+
+/* ===============================
+   تنسيق عام للجسم (Body)
+================================ */
+body {
+  font-family: 'Tajawal', 'Cairo', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  /* الخطوط المستخدمة (تبدأ بخطوط عربية حديثة ثم خطوط النظام الاحتياطية) */
+  background: var(--muted);
+  /* خلفية الصفحة باللون الفاتح المحدد */
+}
+
+/* ===============================
+   تنسيق البطاقات (Cards)
+================================ */
+.card {
+  border-radius: var(--card-radius);
+  /* زوايا البطاقات مستديرة */
+}
+
+/* ===============================
+   تنسيق شعار الشريط العلوي (Navbar)
+================================ */
+.navbar-brand img {
+  filter: hue-rotate(190deg) saturate(1.1);
+  /* تعديل لون الشعار ليبدو أكثر انسجامًا مع الثيم */
+}
+
+/* ===============================
+   دعم الاتجاه من اليمين لليسار (RTL)
+================================ */
+
+/* تعويض المسافة اليمنى/اليسرى عند استخدام Bootstrap في الاتجاه RTL */
+[dir="rtl"] .me-2 {
+  margin-left: .5rem !important;
+  /* نقل المسافة إلى اليسار */
+  margin-right: 0 !important;
+  /* إزالة المسافة من اليمين */
+}
+
+/* ضبط التباعد لعناصر تستخدم .ms-auto (محاذاة تلقائية) */
+[dir="rtl"] .ms-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* ضبط المحاذاة للنصوص عند استخدام الفئات النصية */
+[dir="rtl"] .text-start {
+  text-align: right !important;
+  /* النصوص تبدأ من اليمين */
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+  /* النصوص تنتهي في اليسار */
+}
+
+/* ===============================
+   ضبط ارتفاع البطاقات في قسم "الأحدث"
+================================ */
+#latest-grid .card {
+  height: 100%;
+  /* جعل كل بطاقة تمتد بكامل ارتفاع العمود */
+}
+
+
+/* ================================
+   الوضع الداكن العام
+================================ */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e4e4e4 !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer {
+  background-color: #1f1f1f !important;
+  color: #e4e4e4 !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .bg-light {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode a {
+  color: #9dcfff !important;
+}
+
+body.dark-mode .btn-outline-dark {
+  border-color: #f1f1f1;
+  color: #f1f1f1;
+}
